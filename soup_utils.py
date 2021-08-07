@@ -23,3 +23,11 @@ def get_page_soup(url):
             f.write(content)
 
     return BeautifulSoup(content, "html.parser")
+
+
+def delete_cache(url):
+    hash_hex = hashlib.md5(url.encode('utf-8')).hexdigest()
+    cached_page_path = "./cached_pages/" + str(hash_hex) + ".html"
+
+    if os.path.exists(cached_page_path):
+        os.remove(cached_page_path)
