@@ -1,0 +1,3 @@
+# gpt-wayne
+
+No robot will ever replace the one and only Lil Wayne, but you can always try...
