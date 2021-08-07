@@ -18,8 +18,7 @@ for song_link in song_links.reverse():
     try:
         # Extract all text from the html page
         lyrics = song_soup.find(
-            "div",
-            {"class": "col-xs-12 col-lg-8 text-center"}
+            "div", {"class": "col-xs-12 col-lg-8 text-center"}
         ).get_text()
     except Exception as e:
         delete_cache(DOMAIN + song_link.get("href")[2:])
